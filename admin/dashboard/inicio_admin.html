@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SUPERGASTOS - Administración</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="inicio_admin.css">
+</head>
+<body>
+    <div class="layout">
+        <!-- BARRA LATERAL -->
+        <aside class="menu">
+            <header class="encabezado-menu">
+                <h2>SUPERGASTOS</h2>
+                <p>Administración</p>
+            </header>
+            <nav id="sidebarNav" class="menu-lista">
+                <a href="#" data-vista="dashboard" class="activo"><i class="bi bi-speedometer2"></i> Dashboard</a>
+                <a href="#" data-vista="presupuestos"><i class="bi bi-wallet2"></i> Presupuestos</a>
+                <a href="#" data-vista="solicitudes"><i class="bi bi-bell-fill"></i> Solicitudes</a>
+                <a href="#" data-vista="gastos"><i class="bi bi-cash-stack"></i> Gastos</a>
+                <a href="#" data-vista="mermas"><i class="bi bi-graph-down-arrow"></i> Mermas</a>
+                <a href="#" data-vista="insumos"><i class="bi bi-box-seam"></i> Insumos</a>
+                <a href="#" data-vista="historial"><i class="bi bi-clock-history"></i> Historial</a>
+                <a href="#" data-vista="departamentos"><i class="bi bi-grid-fill"></i> Departamentos</a>
+                <a href="#" data-vista="usuarios"><i class="bi bi-people-fill"></i> Usuarios</a>
+                <a href="#" data-vista="proveedores"><i class="bi bi-truck"></i> Proveedores</a>
+                <a href="#" data-vista="reportes"><i class="bi bi-file-earmark-bar-graph-fill"></i> Reportes</a>
+            </nav>
+            <div class="menu-footer">
+                <button class="btn-cerrar-sesion" id="cerrar-sesion"><i class="bi bi-box-arrow-right"></i> Cerrar sesión</button>
+            </div>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido">
+            <header class="encabezado">
+                <div>
+                    <h2 id="titulo-vista">Dashboard</h2>
+                    <p id="subtitulo-vista">Resumen general del supermercado</p>
+                </div>
+                <div class="encabezado-acciones">
+                    <i class="bi bi-bell-fill campana"></i>
+                    <div class="usuario"><i class="bi bi-person-circle"></i> <span id="nombre-usuario">Administrador</span></div>
+                </div>
+            </header>
+
+            <div class="cuerpo">
+                <p id="aviso" class="aviso" hidden></p>
+
+                <!-- CONTENEDOR DINÁMICO DE VISTAS -->
+                <div id="vista-contenedor">
+                    <!-- Se inyecta la vista activa mediante JavaScript -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- MODAL GENERAL PARA ASIGNAR/EDITAR PRESUPUESTO -->
+    <dialog id="modal-presupuesto">
+        <form id="form-presupuesto">
+            <h3>Asignar presupuesto</h3>
+            <label for="sel-departamento">Departamento</label>
+            <select id="sel-departamento" required></select>
+            <label for="sel-tipo">Tipo</label>
+            <select id="sel-tipo" required>
+                <option value="diario">Diario</option>
+                <option value="semanal">Semanal</option>
+                <option value="mensual">Mensual</option>
+            </select>
+            <label for="inp-monto">Monto</label>
+            <input type="number" id="inp-monto" min="0" step="0.01" placeholder="Ej. 50000" required>
+            <div class="modal-botones">
+                <button type="button" class="btn-borde" id="btn-cancelar">Cancelar</button>
+                <button type="submit" class="btn-azul">Guardar</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="inicio_admin.js"></script>
+</body>
+</html>

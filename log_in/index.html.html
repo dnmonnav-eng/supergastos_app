@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Inicio de sesión</title>
+        <link rel="stylesheet" href="log_in.css">
+    </head>
+    <body>
+        <!--Inicio de sesion-->
+        <form class="caja">
+            <h1>SUPERGASTOS</h1>
+            <p class="texto">Administrador de gastos y presupuestos</p>
+
+            <input type="email" id="correo" class="correo" placeholder="Correo Electrónico" required>
+            <input type="password" id="password" class="contra" placeholder="Contraseña" required>
+
+            <p id="mensaje" style="color:red; margin:10px 0 0;"></p>
+
+            <button type="submit" id="submit">Iniciar Sesión</button>
+        </form>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <script src="log_in.js"></script>
+    </body>
+</html>

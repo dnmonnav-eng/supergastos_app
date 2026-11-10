@@ -1,0 +1,84 @@
+.texto{
+    color:#857D7D;
+    margin-bottom: 30px;
+
+}
+
+h1{
+    text-align:center;
+    color:#0B68F4;
+
+}
+
+button{
+    padding:10px;
+    background-color:#0B68F4;
+    color:white;
+    border-radius:7px;
+    border: 1px solid #ddd;
+    width: 95%;
+    height: 95%;
+    margin-top: 30px;
+}
+
+button:hover{
+    background-color:#0956C8;
+}
+
+button:active{
+    transform: scale(0.98);
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height: 100vh;
+    margin:0px;
+    background-color:#1D3152;
+}
+
+.caja{
+    background-color:white;
+    padding:40px 30px;
+    width: 325px;
+    border-radius:12px;
+    box-shadow: 0px 4px 10px #505050;
+    border: 2px solid #ddd;
+    text-align:center;
+}
+
+.casillas{
+    justify-content: center;
+    height:95%;
+    width:95%;
+    padding:10px;
+    border:1px solid #C4C4C4;
+    border-radius:5px;
+    margin:10px;
+    box-sizing:border-box;
+}
+
+.correo{
+    margin-bottom: 20px;
+    justify-content: center;
+    height:95%;
+    width:95%;
+    padding:10px;
+    border:1px solid #C4C4C4;
+    border-radius:5px;
+    margin:10px;
+    box-sizing:border-box;
+}
+
+.contra{
+    margin-top:20px;
+    justify-content: center;
+    height:95%;
+    width:95%;
+    padding:10px;
+    border:1px solid #C4C4C4;
+    border-radius:5px;
+    margin:10px;
+    box-sizing:border-box;
+}
